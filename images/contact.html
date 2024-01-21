@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color:  #06044f;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px  #06044f;
+            }
+
+        form {
+            display: grid;
+            gap: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px;
+            background-color:  #06044f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #06044f;
+        }
+
+        .confirmation-message {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e3d4ed;
+            border: 1px solid #dfc3e6;
+            border-radius: 5px;
+            color: #411557;
+        }
+    </style>
+    <title>Contact Us</title>
+</head>
+<body>
+
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <section>
+        <form id="contactForm">
+            <label for="name">Contact no. : +91 98407882767</label>
+            <label for="email">Call "104" for immediate First Aid</label>
+            <label for="message">Call "100" in case of any emergency</label>
+            <button type="button" onclick="submitForm()">Call 108</button>
+        </form>
+
+        <div id="confirmationMessage" class="confirmation-message" style="display: none;">
+            Your call has been placed.
+        </div>
+    </section>
+
+    <script>
+        function submitForm() {
+            // Here, you can add code to handle form submission (e.g., sending data to a server).
+            // For simplicity, this example only displays a confirmation message.
+            document.getElementById('contactForm').style.display = 'none';
+            document.getElementById('confirmationMessage').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
